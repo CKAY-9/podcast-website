@@ -24,3 +24,10 @@ Simple podcast website for hosting your podcast episodes.
 5. Fill in the information and put the proper file name
 6. Save index.js
 7. Refresh website
+
+### Changing General Information
+1. Edit index.js
+2. Find `podcast_name` or `podcast_description`, or social links (leave blank for invisible)
+3. Change to whatever you want
+4. Save index.js
+5. Refresh website

@@ -24,6 +24,11 @@ h1, h2, h3 {
   margin: 0.5rem 0;
 }
 
+footer {
+  padding: 5rem 10rem;
+  border-top: 1px solid var(--text);
+}
+
 .splash {
   width: 100vw;
   height: 100vh;
@@ -71,13 +76,14 @@ h1, h2, h3 {
   display: flex;
   align-items: center;
   gap: 3rem;
-  box-shadow: var(--primary-shadow);
+  box-shadow: var(--secondary-shadow);
   transform: scale(1);
-  transition: 0.35s ease transform;
+  transition: 0.35s ease transform, 0.35s ease box-shadow;
 }
 
 .member:hover {
   transform: scale(1.025) rotate(-1deg);
+  box-shadow: var(--primary-shadow);
 }
 
 .member img {
@@ -110,11 +116,13 @@ h1, h2, h3 {
   color: var(--background);
   background-color: var(--primary);
   transform: scale(1);
-  transition: 0.35s ease transform;
+  box-shadow: var(--secondary-shadow);
+  transition: 0.35s ease transform, 0.35s ease box-shadow;
 }
 
 .episode:hover {
   transform: scale(1.025);
+  box-shadow: var(--primary-shadow);
 }
 
 .episode .info {
@@ -123,9 +131,9 @@ h1, h2, h3 {
 
 .episode img {
   width: 100%;
-  height: auto;
+  height: 15rem;
   object-fit: cover;
-  filter: opacity(0.5); 
+  filter: opacity(0.8); 
   transition: 0.35s ease filter;
 }
 
@@ -139,11 +147,31 @@ h1, h2, h3 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 5rem;
-  height: 5rem;
   padding: 1rem;
   background-color: transparent;
   border-radius: 50%;
   outline: none;
   border: transparent;
+}
+
+.play_podcast img {
+  height: 5rem;
+  width: 5rem;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.socials a {
+  width: 3rem;
+  height: 3rem;
+  text-decoration: none;
+}
+
+.socials a img {
+  width: 100%;
+  height: 100%;
 }

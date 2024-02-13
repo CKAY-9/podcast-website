@@ -2,47 +2,75 @@ const members = [
   {
     "name": "Some Dude #1",
     "description": "Some Dude #1 Description",
-    "image": "sample.webp"
+    "image": "person_1.jpg"
   },
   {
     "name": "Some Dude #2",
     "description": "Some Dude #2 Description",
-    "image": "sample.webp"
+    "image": "person_2.jpg"
   },
   {
   "name": "Some Dude #3",
   "description": "Some Dude #3 Description",
-  "image": "sample.webp"
+  "image": "person_3.png"
   },
 ];
 const podcast_name = "The Podcast Name";
 const podcast_description = "The Podcast Description. Write whatever you want here";
-
+const podcast_twitter = "LEAVE BLANK TO REMOVE";
+const podcast_instagram = "LEAVE BLANK TO REMOVE";
+const podcast_youtube = "LEAVE BLANK TO REMOVE";
 const podcast_episodes = [
   {
     "name": "Our First Podcast Episode",
     "description": "Very short brief description",
     "date": "2024-02-12",
-    "thumbnail": "sample.webp",
+    "thumbnail": "episode_1.jpg",
     "audio_file": new Audio("./content/sample.mp3")
   },
   {
     "name": "Our Second Podcast Episode",
     "description": "Very short brief cool description",
     "date": "2024-02-12",
-    "thumbnail": "sample.webp",
+    "thumbnail": "episode_2.gif",
     "audio_file": new Audio("./content/sample.mp3")
   },
   {
     "name": "Our Third Podcast Episode",
     "description": "Very short brief very cool description",
     "date": "2024-02-12",
-    "thumbnail": "sample.webp",
+    "thumbnail": "episode_3.jpg",
     "audio_file": new Audio("./content/sample.mp3")
   },
 ]
 
-// DONT EDIT THIS STUFF
+//////////////////////////
+// DONT EDIT THIS STUFF //
+/////////////////////////
+const name_splash = document.getElementById("podcast_name_splash");
+name_splash.innerHTML = podcast_name;
+const name_footer = document.getElementById("podcast_name_footer");
+name_footer.innerHTML = podcast_name;
+const description = document.getElementById("podcast_description");
+description.innerHTML = podcast_description
+
+const socials = document.getElementById("socials");
+if (podcast_twitter != "") {
+  socials.innerHTML += `
+    <a href="${podcast_twitter}"><img src="./content/twitter.svg" alt="Twitter" /></a>
+  `;
+}
+if (podcast_youtube != "") {
+  socials.innerHTML += `
+    <a href="${podcast_youtube}"><img src="./content/youtube.svg" alt="YouTube" /></a>
+  `;
+}
+if (podcast_instagram != "") {
+  socials.innerHTML += `
+    <a href="${podcast_instagram}"><img src="./content/instagram.svg" alt="Instagram" /></a>
+  `;
+}
+
 const members_splash = document.getElementById("members");
 for (let i = 0; i < members.length; i++) {
   const member = members[i];
