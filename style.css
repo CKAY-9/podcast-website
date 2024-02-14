@@ -11,6 +11,18 @@
   --secondary-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
+@keyframes fade_in {
+  0% {
+    opacity: 0;
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+
 body, html {
   background-color: var(--background);
   color: var(--text);
@@ -60,8 +72,11 @@ footer {
   transform: translate(-50%, -50%);
   width: 3rem;
   height: 3rem;
-  filter: invert(1);
+  filter: invert(1) !important;
   transition: 1s ease opacity;
+  opacity: 0;
+  animation: fade_in 1.5s ease forwards;
+  animation-delay: 1.5s;
 }
 
 .members {
@@ -79,6 +94,7 @@ footer {
   box-shadow: var(--secondary-shadow);
   transform: scale(1);
   transition: 0.35s ease transform, 0.35s ease box-shadow;
+  animation: fade_in 1.5s ease forwards;
 }
 
 .member:hover {
